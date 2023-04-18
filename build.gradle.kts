@@ -15,7 +15,7 @@ plugins {
     alias(libs.plugins.taskTree)
 }
 
-group = "org.danilopianini"
+group = "it.nicolasfarabegoli.pulverization.crowdroom"
 
 repositories {
     google()
@@ -38,6 +38,14 @@ kotlin {
             dependencies {
                 implementation(libs.bundles.kotlin.testing.common)
                 implementation(libs.bundles.kotest.common)
+                implementation(libs.bundles.pulverization)
+                implementation(libs.kotlinx.coroutine)
+            }
+        }
+        val jvmMain by getting {
+            dependencies {
+                implementation(libs.rabbitmq.reactor)
+                implementation(libs.kotlinx.reactor)
             }
         }
         val jvmTest by getting {
@@ -69,7 +77,7 @@ kotlin {
     }
 
     linuxX64(nativeSetup)
-    linuxArm64(nativeSetup)
+    // linuxArm64(nativeSetup)
 
     mingwX64(nativeSetup)
 
