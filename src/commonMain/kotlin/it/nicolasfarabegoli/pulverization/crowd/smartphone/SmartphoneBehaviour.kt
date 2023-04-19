@@ -16,7 +16,7 @@ class SmartphoneBehaviour : Behaviour<Unit, NeighboursDistances, NeighboursRssi,
     override val context: Context by inject()
 
     companion object {
-        private const val RSSI_ONE_METER = -40
+        private const val RSSI_ONE_METER = -60
         private const val ENV_CONSTANT = (10.0 * 2.0)
     }
 

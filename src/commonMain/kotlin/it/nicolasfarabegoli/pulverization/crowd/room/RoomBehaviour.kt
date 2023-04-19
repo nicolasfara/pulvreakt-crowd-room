@@ -1,5 +1,6 @@
 package it.nicolasfarabegoli.pulverization.crowd.room
 
+import co.touchlab.kermit.Logger
 import it.nicolasfarabegoli.pulverization.component.Context
 import it.nicolasfarabegoli.pulverization.core.Behaviour
 import it.nicolasfarabegoli.pulverization.core.BehaviourOutput
@@ -14,6 +15,7 @@ import org.koin.core.component.inject
 
 class RoomBehaviour : Behaviour<StateOps, NeighboursDistances, Unit, CongestionColor, Unit> {
     override val context: Context by inject()
+    private val logger = Logger.withTag("RoomBehaviour")
 
     companion object {
         private const val MIN_DISTANCE = 0.5
@@ -31,11 +33,12 @@ class RoomBehaviour : Behaviour<StateOps, NeighboursDistances, Unit, CongestionC
             .map { it.distances.values }
             .flatten()
         var meanDistance = distances.sum() / distances.size
+        logger.i { "Mean distance: $meanDistance" }
 
         if (meanDistance < MIN_DISTANCE) meanDistance = MIN_DISTANCE
         if (meanDistance > MAX_DISTANCE) meanDistance = MAX_DISTANCE
 
-        val greenChannel = ((meanDistance - MIN_DISTANCE) / (MAX_DISTANCE - MIN_DISTANCE)).toInt()
+        val greenChannel = ((meanDistance - MIN_DISTANCE) / (MAX_DISTANCE - MIN_DISTANCE) * MAX_RGB_VALUE).toInt()
         val redChannel = MAX_RGB_VALUE - greenChannel
         val congestionColor = CongestionColor(redChannel, greenChannel, 0)
 
