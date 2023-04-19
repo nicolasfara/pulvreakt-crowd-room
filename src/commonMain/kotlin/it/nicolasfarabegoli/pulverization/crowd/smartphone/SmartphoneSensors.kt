@@ -1,5 +1,6 @@
 package it.nicolasfarabegoli.pulverization.crowd.smartphone
 
+import co.touchlab.kermit.Logger
 import it.nicolasfarabegoli.pulverization.component.Context
 import it.nicolasfarabegoli.pulverization.core.Sensor
 import it.nicolasfarabegoli.pulverization.core.SensorsContainer
@@ -14,16 +15,19 @@ import kotlin.time.Duration.Companion.milliseconds
 @Serializable
 data class NeighboursRssi(val neighboursRssi: Map<String, Int>)
 
-class SmartphoneSensors : Sensor<NeighboursRssi> {
+class SmartphoneSensors(private val deviceId: String) : Sensor<NeighboursRssi> {
+    private val logger = Logger.withTag("SmartphoneSensors")
+
     companion object {
-        private const val MIN_RSSI = -90
-        private const val MAX_RSSI = -30
-        private const val PERCEIVED_NEIGHBOURS = 2
+        private const val MIN_RSSI = -75
+        private const val MAX_RSSI = -50
+        private const val PERCEIVED_NEIGHBOURS = 3
     }
     override suspend fun sense(): NeighboursRssi {
         val perceived = (1..PERCEIVED_NEIGHBOURS)
             .map { it.toString() }
             .associateWith { Random.nextInt(MIN_RSSI, MAX_RSSI) }
+        logger.i { "Perceived neighbours [$deviceId]: $perceived" }
         return NeighboursRssi(perceived)
     }
 }
@@ -32,7 +36,7 @@ class SmartphoneSensorsContainer : SensorsContainer() {
     override val context: Context by inject()
 
     override suspend fun initialize() {
-        this += SmartphoneSensors().apply { initialize() }
+        this += SmartphoneSensors(context.deviceID).apply { initialize() }
     }
 }
 
