@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - proxynet
+
+  pc:
+    build:
+      context: .
+    environment:
+      HOST: "pc"
+      DEVICE_TYPE: "room"
+    networks:
+      - proxynet
+
+  server:
+    build:
+      context: .
+    environment:
+      HOST: "server"
+      DEVICE_TYPE: "smartphone"
+      DEVICE_NUM: 3
+    networks:
+      - proxynet
+
+  smartphones:
+    build:
+      context: .
+    environment:
+      HOST: "smartphone"
+      DEVICE_TYPE: "smartphone"
+      DEVICE_NUM: 3
+    networks:
+      - proxynet
+
+networks:
+  proxynet:
+    name: custom_network
