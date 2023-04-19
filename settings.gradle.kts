@@ -1,4 +1,4 @@
-@file:Suppress("UnstableApiUsage")
+import java.util.*
 
 pluginManagement {
     repositories {
@@ -27,4 +27,4 @@ gitHooks {
     createHooks()
 }
 
-rootProject.name = "Template-for-Kotlin-Multiplatform-Projects".toLowerCase()
+rootProject.name = "ACSOS-2023-pulverization-crowd-room".lowercase(Locale.getDefault())

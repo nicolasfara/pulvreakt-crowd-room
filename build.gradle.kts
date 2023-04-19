@@ -1,3 +1,4 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.danilopianini.gradle.mavencentral.JavadocJar
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 import org.gradle.internal.os.OperatingSystem
@@ -13,6 +14,8 @@ plugins {
     alias(libs.plugins.npm.publish)
     alias(libs.plugins.publishOnCentral)
     alias(libs.plugins.taskTree)
+    alias(libs.plugins.shadow)
+    alias(libs.plugins.kotlinx.serialization)
 }
 
 group = "it.nicolasfarabegoli.pulverization.crowdroom"
@@ -20,6 +23,21 @@ group = "it.nicolasfarabegoli.pulverization.crowdroom"
 repositories {
     google()
     mavenCentral()
+}
+
+fun ShadowJar.jarConfiguration(jarName: String, mainClass: String) {
+    archiveClassifier.set("all")
+    archiveBaseName.set(jarName)
+    archiveVersion.set("")
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    exclude("META-INF/*.SF", "META-INF/*.RSA", "META-INF/*.DSA")
+    manifest {
+        attributes("Main-Class" to mainClass)
+    }
+    val main by kotlin.jvm().compilations
+    from(main.output)
+    configurations += main.compileDependencyFiles as Configuration
+    configurations += main.runtimeDependencyFiles as Configuration
 }
 
 kotlin {
@@ -30,16 +48,36 @@ kotlin {
         testRuns["test"].executionTask.configure {
             useJUnitPlatform()
         }
+        val smartphoneJar by tasks.registering(ShadowJar::class) {
+            description = "Generate jar for smartphone device"
+            group = "publishing"
+            jarConfiguration("smartphone", "it.nicolasfarabegoli.pulverization.crowd.smartphone.SmartphoneMainKt")
+        }
+        val roomJar by tasks.registering(ShadowJar::class) {
+            description = "Generate jar for room device"
+            group = "publishing"
+            jarConfiguration("room", "it.nicolasfarabegoli.pulverization.crowd.room.RoomMainKt")
+        }
+        val generateJars by tasks.registering {
+            description = "Generate all the jars"
+            group = "publishing"
+            dependsOn(smartphoneJar, roomJar)
+        }
     }
 
     sourceSets {
-        val commonMain by getting { }
+        val commonMain by getting {
+            dependencies {
+                implementation(libs.bundles.pulverization)
+                implementation(libs.kotlinx.coroutine)
+                implementation(libs.kotlinx.serialization)
+                implementation(libs.koin.core)
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(libs.bundles.kotlin.testing.common)
                 implementation(libs.bundles.kotest.common)
-                implementation(libs.bundles.pulverization)
-                implementation(libs.kotlinx.coroutine)
             }
         }
         val jvmMain by getting {
