@@ -16,6 +16,7 @@ services:
     environment:
       HOST: "pc"
       DEVICE_TYPE: "room"
+      DEBUG_LOG_LEVEL: 0
     networks:
       - proxynet
 
@@ -26,6 +27,7 @@ services:
       HOST: "server"
       DEVICE_TYPE: "smartphone"
       DEVICE_NUM: 3
+      DEBUG_LOG_LEVEL: 0
     networks:
       - proxynet
 
@@ -36,6 +38,7 @@ services:
       HOST: "smartphone"
       DEVICE_TYPE: "smartphone"
       DEVICE_NUM: 3
+      DEBUG_LOG_LEVEL: 0
     networks:
       - proxynet
 
