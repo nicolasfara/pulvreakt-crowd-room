@@ -25,6 +25,7 @@ class SmartphoneSensors(private val deviceId: String) : Sensor<NeighboursRssi> {
     }
     override suspend fun sense(): NeighboursRssi {
         val perceived = (1..PERCEIVED_NEIGHBOURS)
+            .filter { it != deviceId.toInt() }
             .map { it.toString() }
             .associateWith { Random.nextInt(MIN_RSSI, MAX_RSSI) }
         logger.i { "Perceived neighbours [$deviceId]: $perceived" }
