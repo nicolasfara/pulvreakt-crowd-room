@@ -1,3 +1,29 @@
+## 1.0.0 (2023-04-20)
+
+
+### Build and continuous integration
+
+* set maven username ([ebe8832](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/ebe8832abf3846cc3cfed4ce5b3f3b11c1e9d182))
+
+
+### General maintenance
+
+* add logging ([1253da4](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/1253da443e5006982ac25ceb4bc3b84412e01018))
+* add pulverization dependency and serialization plugin ([fec2b99](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/fec2b99bdaa3ec8b6baddaf1b7646e99d1f454c0))
+* adjust RSSI range and log perceived neighbours ([40c3a83](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/40c3a834b419c2aeda86a71e9d3e37ba7f543620))
+* **build:** setup dependencies ([9c5e61f](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/9c5e61f4f9b9f9f2b97f2d2253203e598da8c954))
+* dockerize application ([a447390](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/a4473903db2d4479a57a8d918a9ec5089ed0d5c7))
+* enable debug log via environment variable ([080f3d3](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/080f3d320ac70d3ab5a27a5ddc0d2b4811a58de9))
+* fix exclude self id from RSSI generated data ([684c822](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/684c822a39c28fb12fb7d0c7644144fbfbd5d5ed))
+* fix formula for the green channel ([d508da1](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/d508da1bdd34da5453ee9219c1eb1e2830fc3b97))
+* implement crowd room demo ([6e692f7](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/6e692f70d3e70a0219ab8715e100b28cd7c8f2b3))
+* set log level to info ([e789100](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/e789100b4351450a3545a9baa5724c1ac1b2ea44))
+
+
+### Documentation
+
+* update readme ([88e4665](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/88e4665447ebcbd369a2c002157fb219e21b81c4))
+
 ## [0.1.11](https://github.com/DanySK/Template-for-Kotlin-Multiplatform-Projects/compare/0.1.10...0.1.11) (2023-04-18)
 
 
