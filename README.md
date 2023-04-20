@@ -2,18 +2,46 @@
 
 # Scenario
 
-People equipped with **smartphones** move around inside a **room**.
-The smartphones sense the distance between them through the (simulated) RSSI signal of Bluetooth.
-Each smartphone then sends the distance information to the room, which then provides a metric for aggregating people within the room.
-The room shows on a monitor a color tending toward the green the farther away people are from each other; instead, it shows a color that turns toward red the closer people are to each other.
+Many people may have access to a laboratory and for security reasons they must maintain a certain distance on average.
+The laboratory can sense the distance between people through a wearable that they wear.
+To ensure the distance between people within the laboratory, a green color is shown on a monitor when people are far
+apart, and a red color the closer people are to each other.
 
-The system involves the definition of two devices: smartphone and room.
-The available infrastructure includes a server, a local pc and the smartphones themselves.
-The system, taking advantage of the pulverization approach, is intended to be reconfigured if certain conditions occur.
-The system starts by executing the _behavior_ of the smartphones on the server, while _sensors_ and _communication_ are executed on the smartphones.
-The room, on the other hand, has all components executed on the local pc.
-In the demo, the event that triggers a deployment reconfiguration is the high load on the server.
-Should this condition occur, the load on the server is reduced by shifting the behavior directly to the smartphones.
+A possible implementation of this scenario may involve the definition of the following devices:
+**wearable** and **laboratory**.
+The former has the task of sensing other wearables by determining their distances, then sending that information to
+the **laboratory**.
+The latter has the task of determining a laboratory congestion metric based on the average of the distances
+(received from the **wearables**) and transforming this metric into the corresponding color that will be shown on
+the screen.
+
+The proposed demo exploits the pulverization approach to implement the above system via the
+[pulverization-framework](https://github.com/nicolasfara/pulverization-framework).
+Specifically, the two devices, **wearable** and **laboratory**, are structured as follows:
+
+- **wearable**: _Sensor_, _Behavior_, and _Communication_
+- **laboratory**: _Actuator_, _Behavior_, _State_, and _Communication_
+
+The **wearable** through the _Sensor_ component senses the other devices through the RSSI value of Bluetooth (simulated).
+Through the _Behavior_, it converts the RSSI values to distances and then sends this data to the **laboratory** through
+the _Communication_ component.
+
+Similarly, the **laboratory** receives the distance data from the various **wearables** through the _Communication_ component,
+determines the average distance of the devices in the room and persists this information in the _State_ component,
+and then converts the average distance into the respective color which is then shown on the screen through
+the _Actuator_ component.
+
+The infrastructure provided to run this system includes the following hosts:
+
+- 1 _Server_
+- 1 _PC_
+- $N$ _Smartphones_ (as many as there are people inside the lab).
+
+Initially the **wearables** start with _Behavior_ component running on the server, while the other components are
+run on the Smartphone.
+The **laboratory** device has all components running on the PC.
+A reconfiguration rule is defined such that when the server has a high load, the **wearables**' _Behavior_ component
+is moved from the Server to the Smartphone.
 
 ## Usage
 
@@ -57,7 +85,7 @@ acsos-2023-pulverization-crowd-room-server-1       | Info: (RabbitmqCommunicator
 ```
 
 After the initialization step, each deployment unit starts to run the components. In particular, each smartphone
-starts sending to the room the distances from the other smartphones.
+starts sending to the **laboratory** the distances from the other smartphones.
 The following log example shows this interaction:
 
 ```
@@ -77,13 +105,15 @@ acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomActuator) New co
 ...
 ```
 
-The order of the printed log do not represents the real oder on which the communication occurs.
+The order of the printed log does not represents the real order on which the communication occurs.
 Nevertheless, from the log above, `Info: (SmartphoneSensors) Perceived neighbours [<n>]: {<n_1>=-<rssi>, <n_2>=-<rssi>}`
 represents that the device `<n>` has perceived `<n_1>` and `<n_2>` with their corresponding RSSI.
-`Info: (SmartphoneBehaviour) Smartphone [<n>] distances: {<n_1>=0.7079457843841379, <n_2>=3.1622776601683795}` represents the conversion of the RSSI into a distance.
+`Info: (SmartphoneBehaviour) Smartphone [<n>] distances: {<n_1>=<distance>, <n_2>=<distance>}` represents the conversion
+of the RSSI into a distance.
 
-`Info: (RoomBehaviour) Mean distance: 1.496505733160854` means that the room has updated its congestion metrics and
-`Info: (RoomActuator) New color shown: CongestionColor(red=184, green=71, blue=0)` represents the color update in the monitor relative to the metrics update.
+`Info: (RoomBehaviour) Mean distance: 1.496505733160854` means that the laboratory has updated its congestion metrics and
+`Info: (RoomActuator) New color shown: CongestionColor(red=<red_channel>, green=<green_channel>, blue=<blue_channel>)`
+represents the color update in the monitor relative to the metrics update.
 
 ### Reconfiguration event
 
@@ -116,7 +146,10 @@ acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (SmartphoneBehaviour)
 ...
 ```
 
-As can be seen, the behaviour moves from the **server** into the **smartphone**. This can be seen because the log is printed from the
+As can be seen, the behaviour moves from the **Server** into the **Smartphones**. This can be seen because the log is printed from the
 `acsos-2023-pulverization-crowd-room-smartphones-1` (previously executed on `acsos-2023-pulverization-crowd-room-server-1`).
 
 ## Verbose logs
+
+To have a more verbose logs, the `DEBUG_LOG_LEVEL` environment variable can be set to "1".
+This enables the debug log inside the framework showing the interaction and communication between components to better understand how the framework behave.
