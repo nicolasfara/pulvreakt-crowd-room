@@ -151,5 +151,6 @@ As can be seen, the behaviour moves from the **Server** into the **Smartphones**
 
 ## Verbose logs
 
-To have a more verbose logs, the `DEBUG_LOG_LEVEL` environment variable can be set to "1".
-This enables the debug log inside the framework showing the interaction and communication between components to better understand how the framework behave.
+To have a more verbose log, the DEBUG_LOG_LEVEL environment variable can be set to "1".
+This enables the debug log inside the framework to show the interaction and communication between components to
+better understand how the framework behaves.
