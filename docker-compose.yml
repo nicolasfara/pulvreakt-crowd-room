@@ -1,5 +1,10 @@
 version: "3"
 
+x-debug-log: &debug
+  DEBUG_LOG_LEVEL: 1
+x-device-num: &device-num
+  DEVICE_NUM: 3
+
 services:
   rabbitmq:
     container_name: rabbitmq
@@ -17,7 +22,7 @@ services:
     environment:
       HOST: "pc"
       DEVICE_TYPE: "laboratory"
-      DEBUG_LOG_LEVEL: 0
+      <<: *debug
     networks:
       - proxynet
 
@@ -28,8 +33,8 @@ services:
     environment:
       HOST: "server"
       DEVICE_TYPE: "wearable"
-      DEVICE_NUM: 3
-      DEBUG_LOG_LEVEL: 0
+      <<: *device-num
+      <<: *debug
     networks:
       - proxynet
 
@@ -40,8 +45,8 @@ services:
     environment:
       HOST: "smartphone"
       DEVICE_TYPE: "wearable"
-      DEVICE_NUM: 3
-      DEBUG_LOG_LEVEL: 0
+      <<: *device-num
+      <<: *debug
     networks:
       - proxynet
 
