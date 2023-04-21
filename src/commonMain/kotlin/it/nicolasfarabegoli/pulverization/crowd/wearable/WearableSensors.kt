@@ -28,7 +28,7 @@ class WearableSensors(private val deviceId: String) : Sensor<NeighboursRssi> {
             .filter { it != deviceId.toInt() }
             .map { it.toString() }
             .associateWith { Random.nextInt(MIN_RSSI, MAX_RSSI) }
-        logger.i { "Perceived neighbours [$deviceId]: $perceived" }
+        logger.i { "Wearable#$deviceId Perceived neighbours: $perceived" }
         return NeighboursRssi(perceived)
     }
 }

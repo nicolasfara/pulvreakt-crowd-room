@@ -15,7 +15,7 @@ import org.koin.core.component.inject
 
 class LaboratoryBehaviour : Behaviour<StateOps, NeighboursDistances, Unit, CongestionColor, Unit> {
     override val context: Context by inject()
-    private val logger = Logger.withTag("RoomBehaviour")
+    private val logger = Logger.withTag("LaboratoryBehaviour")
 
     companion object {
         private const val MIN_DISTANCE = 0.5

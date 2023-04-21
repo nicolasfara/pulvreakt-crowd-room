@@ -15,7 +15,7 @@ import kotlin.math.pow
 
 class WearableBehaviour : Behaviour<Unit, NeighboursDistances, NeighboursRssi, Unit, Unit> {
     override val context: Context by inject()
-    private val logger = Logger.withTag("SmartphoneBehaviour")
+    private val logger = Logger.withTag("WearableBehaviour")
 
     companion object {
         private const val RSSI_ONE_METER = -60
@@ -30,7 +30,7 @@ class WearableBehaviour : Behaviour<Unit, NeighboursDistances, NeighboursRssi, U
         val perceivedRssi = sensedValues.neighboursRssi
         val distances = perceivedRssi.mapValues { (_, rssi) -> 10.0.pow((RSSI_ONE_METER - rssi) / ENV_CONSTANT) }
         val message = NeighboursDistances(context.deviceID, distances)
-        logger.i { "Smartphone [${context.deviceID}] distances: $distances" }
+        logger.i { "Wearable#${context.deviceID} distances: $distances" }
         return BehaviourOutput(Unit, message, Unit, Unit)
     }
 }

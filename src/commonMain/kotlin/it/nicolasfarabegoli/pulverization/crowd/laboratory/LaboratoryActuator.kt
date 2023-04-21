@@ -18,7 +18,7 @@ private fun String.colorize(color: CongestionColor): String {
 }
 
 class LaboratoryActuator : Actuator<CongestionColor> {
-    private val logger = Logger.withTag("RoomActuator")
+    private val logger = Logger.withTag("LaboratoryActuator")
     private val solidBlocks = (1..BLOCK_LENGTH).map { BLOCK }.joinToString("")
 
     companion object {
@@ -27,7 +27,7 @@ class LaboratoryActuator : Actuator<CongestionColor> {
     }
 
     override suspend fun actuate(payload: CongestionColor) = logger.i {
-        "Print color: $solidBlocks".colorize(payload)
+        "Print color: ${solidBlocks.colorize(payload)}"
     }
 }
 
