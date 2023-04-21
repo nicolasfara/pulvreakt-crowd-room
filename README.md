@@ -74,7 +74,6 @@ pc           | Info: (Actuators[component]Communicator) Setup communicator
 pc           | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Actuators[component] and Behaviour[component]
 server       | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from State[component] and Behaviour[component]
 ...
-...
 ```
 
 After the initialization step, each deployment unit starts to run the components. In particular, each smartphone
@@ -98,13 +97,14 @@ pc           | Info: (LaboratoryActuator) Print color: ████████�
 ...
 ```
 
-The order of the printed log does not represents the real order on which the communication occurs.
-Nevertheless, from the log above, `Info: (SmartphoneSensors) Wearable#<n> Perceived neighbours: {<n_1>=-<rssi>, <n_2>=-<rssi>}`
-represents that the device `<n>` has perceived `<n_1>` and `<n_2>` with their corresponding RSSI.
-`Info: (SmartphoneBehaviour) Wearable#<n> distances: {<n_1>=<distance>, <n_2>=<distance>}` represents the conversion
+The order of the printed log does not represents the real order on which the communication occurs.  
+Nevertheless, from the log above:  
+`Info: (WearableSensors) Wearable#<n> Perceived neighbours: {<n_1>=-<rssi>, <n_2>=-<rssi>}`
+represents that the device `<n>` has perceived `<n_1>` and `<n_2>` with their corresponding RSSI.  
+`Info: (WearableBehaviour) Wearable#<n> distances: {<n_1>=<distance>, <n_2>=<distance>}` represents the conversion
 of the RSSI into a distance.
 
-`Info: (RoomBehaviour) Mean distance: <mean_distance>` means that the laboratory has updated its congestion metrics and
+`Info: (LaboratoryBehaviour) Mean distance: <mean_distance>` means that the laboratory has updated its congestion metrics.  
 `Info: (LaboratoryActuator) Print color: [COLOR]` represents the color update in the monitor relative to the metrics update.
 
 ### Reconfiguration event
@@ -138,7 +138,7 @@ pc           | Info: (LaboratoryActuator) Print color: ████████�
 ...
 ```
 
-As can be seen, the behaviour moves from the **Server** into the **Smartphones**.
+As can be seen, the behaviour moves from the **Server** into the **Smartphones**.  
 This can be seen because the log is printed from the `smartphones` (previously executed on `server`).
 
 ## Verbose logs
