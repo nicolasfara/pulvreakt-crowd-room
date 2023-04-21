@@ -57,30 +57,23 @@ After the startup of the `docker-compose`, the following logs represents the fra
 
 ```
 ...
-acsos-2023-pulverization-crowd-room-server-1       | Info: (Behaviour[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (Behaviour[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-server-1       | Info: (Behaviour[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (Behaviour[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (Behaviour[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-server-1       | Info: (Behaviour[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and State[component]
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and Communication[component]
-acsos-2023-pulverization-crowd-room-server-1       | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and Communication[component]
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (Behaviour[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and Communication[component]
-acsos-2023-pulverization-crowd-room-server-1       | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and Communication[component]
-acsos-2023-pulverization-crowd-room-server-1       | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and Communication[component]
+pc           | Info: (Behaviour[component]Communicator) Setup communicator
+pc           | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and Communication[component]
+pc           | Info: (Behaviour[component]Communicator) Setup communicator
+pc           | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and Actuators[component]
+server       | Info: (Behaviour[component]Communicator) Setup communicator
+server       | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and Sensor[component]
+pc           | Info: (Sensor[component]Communicator) Setup communicator
+pc           | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Sensor[component] and Behaviour[component]
+server       | Info: (Communication[component]Communicator) Setup communicator
+server       | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Communication[component] and Behaviour[component]
+smartphones  | Info: (Behaviour[component]Communicator) Setup communicator
+smartphones  | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and Sensor[component]
+server       | Info: (State[component]Communicator) Setup communicator
+pc           | Info: (Actuators[component]Communicator) Setup communicator
+pc           | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Actuators[component] and Behaviour[component]
+server       | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from State[component] and Behaviour[component]
 ...
-acsos-2023-pulverization-crowd-room-server-1       | Info: (Behaviour[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-server-1       | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and Sensor[component]
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (Behaviour[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from Behaviour[component] and Communication[component]
-acsos-2023-pulverization-crowd-room-server-1       | Info: (State[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-server-1       | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from State[component] and Behaviour[component]
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (State[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from State[component] and Behaviour[component]
-acsos-2023-pulverization-crowd-room-server-1       | Info: (State[component]Communicator) Setup communicator
-acsos-2023-pulverization-crowd-room-server-1       | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from State[component] and Behaviour[component]
 ...
 ```
 
@@ -90,30 +83,29 @@ The following log example shows this interaction:
 
 ```
 ...
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (SmartphoneSensors) Perceived neighbours [3]: {1=-57, 2=-70}
-acsos-2023-pulverization-crowd-room-server-1       | Info: (SmartphoneBehaviour) Smartphone [3] distances: {1=0.7079457843841379, 2=3.1622776601683795}
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomBehaviour) Mean distance: 1.8377612084846502
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomActuator) New color shown: CongestionColor(red=119, green=136, blue=0)
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (SmartphoneSensors) Perceived neighbours [1]: {2=-69, 3=-53}
-acsos-2023-pulverization-crowd-room-server-1       | Info: (SmartphoneBehaviour) Smartphone [1] distances: {2=2.8183829312644537, 3=0.44668359215096315}
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomBehaviour) Mean distance: 1.5314239357477304
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomActuator) New color shown: CongestionColor(red=150, green=105, blue=0)
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (SmartphoneSensors) Perceived neighbours [2]: {1=-75, 3=-56}
-acsos-2023-pulverization-crowd-room-server-1       | Info: (SmartphoneBehaviour) Smartphone [2] distances: {1=5.623413251903491, 3=0.6309573444801932}
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomBehaviour) Mean distance: 2.231610094058603
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomActuator) New color shown: CongestionColor(red=79, green=176, blue=0)
+smartphones  | Info: (WearableSensors) Wearable#1 Perceived neighbours: {2=-56, 3=-56}
+server       | Info: (WearableBehaviour) Wearable#1 distances: {2=0.6309573444801932, 3=0.6309573444801932}
+pc           | Info: (LaboratoryBehaviour) Mean distance: 1.620525177448518
+pc           | Info: (LaboratoryActuator) Print color: ██████████
+smartphones  | Info: (WearableSensors) Wearable#3 Perceived neighbours: {1=-63, 2=-57}
+server       | Info: (WearableBehaviour) Wearable#3 distances: {1=1.4125375446227544, 2=0.7079457843841379}
+pc           | Info: (LaboratoryBehaviour) Mean distance: 1.6333565840991753
+pc           | Info: (LaboratoryActuator) Print color: ██████████
+smartphones  | Info: (WearableSensors) Wearable#2 Perceived neighbours: {1=-66, 3=-74}
+server       | Info: (WearableBehaviour) Wearable#2 distances: {1=1.9952623149688795, 3=5.011872336272722}
+pc           | Info: (LaboratoryBehaviour) Mean distance: 1.7315887782014798
+pc           | Info: (LaboratoryActuator) Print color: ██████████
 ...
 ```
 
 The order of the printed log does not represents the real order on which the communication occurs.
-Nevertheless, from the log above, `Info: (SmartphoneSensors) Perceived neighbours [<n>]: {<n_1>=-<rssi>, <n_2>=-<rssi>}`
+Nevertheless, from the log above, `Info: (SmartphoneSensors) Wearable#<n> Perceived neighbours: {<n_1>=-<rssi>, <n_2>=-<rssi>}`
 represents that the device `<n>` has perceived `<n_1>` and `<n_2>` with their corresponding RSSI.
-`Info: (SmartphoneBehaviour) Smartphone [<n>] distances: {<n_1>=<distance>, <n_2>=<distance>}` represents the conversion
+`Info: (SmartphoneBehaviour) Wearable#<n> distances: {<n_1>=<distance>, <n_2>=<distance>}` represents the conversion
 of the RSSI into a distance.
 
-`Info: (RoomBehaviour) Mean distance: 1.496505733160854` means that the laboratory has updated its congestion metrics and
-`Info: (RoomActuator) New color shown: CongestionColor(red=<red_channel>, green=<green_channel>, blue=<blue_channel>)`
-represents the color update in the monitor relative to the metrics update.
+`Info: (RoomBehaviour) Mean distance: <mean_distance>` means that the laboratory has updated its congestion metrics and
+`Info: (LaboratoryActuator) Print color: [COLOR]` represents the color update in the monitor relative to the metrics update.
 
 ### Reconfiguration event
 
@@ -121,9 +113,9 @@ When the reconfiguration event is triggered, the log is the following:
 
 ```
 ...
-acsos-2023-pulverization-crowd-room-server-1       | New reconfiguration!
-acsos-2023-pulverization-crowd-room-server-1       | New reconfiguration!
-acsos-2023-pulverization-crowd-room-server-1       | New reconfiguration!
+server       | New reconfiguration!
+server       | New reconfiguration!
+server       | New reconfiguration!
 ...
 ```
 
@@ -131,23 +123,23 @@ After the reconfiguration, the log change as following:
 
 ```
 ...
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomBehaviour) Mean distance: 0.8481771675745647
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomActuator) New color shown: CongestionColor(red=220, green=35, blue=0)
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (SmartphoneSensors) Perceived neighbours [2]: {1=-54, 3=-62}
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (SmartphoneBehaviour) Smartphone [2] distances: {1=0.5011872336272722, 3=1.2589254117941673}
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomBehaviour) Mean distance: 0.9700185226391894
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomActuator) New color shown: CongestionColor(red=208, green=47, blue=0)
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (SmartphoneSensors) Perceived neighbours [3]: {1=-75, 2=-53}
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (SmartphoneBehaviour) Smartphone [3] distances: {1=5.623413251903491, 2=0.44668359215096315}
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomBehaviour) Mean distance: 1.7828182183698418
-acsos-2023-pulverization-crowd-room-pc-1           | Info: (RoomActuator) New color shown: CongestionColor(red=125, green=130, blue=0)
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (SmartphoneSensors) Perceived neighbours [1]: {2=-70, 3=-54}
-acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (SmartphoneBehaviour) Smartphone [1] distances: {2=3.1622776601683795, 3=0.5011872336272722}
+smartphones  | Info: (WearableSensors) Wearable#2 Perceived neighbours: {1=-68, 3=-69}
+smartphones  | Info: (WearableBehaviour) Wearable#2 distances: {1=2.51188643150958, 3=2.8183829312644537}
+pc           | Info: (LaboratoryBehaviour) Mean distance: 1.8090095008099896
+pc           | Info: (LaboratoryActuator) Print color: ██████████
+smartphones  | Info: (WearableSensors) Wearable#1 Perceived neighbours: {2=-60, 3=-75}
+smartphones  | Info: (WearableBehaviour) Wearable#1 distances: {2=1.0, 3=5.623413251903491}
+pc           | Info: (LaboratoryBehaviour) Mean distance: 2.516087731777883
+pc           | Info: (LaboratoryActuator) Print color: ██████████
+smartphones  | Info: (WearableSensors) Wearable#3 Perceived neighbours: {1=-62, 2=-73}
+smartphones  | Info: (WearableBehaviour) Wearable#3 distances: {1=1.2589254117941673, 2=4.466835921509632}
+pc           | Info: (LaboratoryBehaviour) Mean distance: 2.9465739913302205
+pc           | Info: (LaboratoryActuator) Print color: ██████████
 ...
 ```
 
-As can be seen, the behaviour moves from the **Server** into the **Smartphones**. This can be seen because the log is printed from the
-`acsos-2023-pulverization-crowd-room-smartphones-1` (previously executed on `acsos-2023-pulverization-crowd-room-server-1`).
+As can be seen, the behaviour moves from the **Server** into the **Smartphones**.
+This can be seen because the log is printed from the `smartphones` (previously executed on `server`).
 
 ## Verbose logs
 

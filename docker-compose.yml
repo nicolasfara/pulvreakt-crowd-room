@@ -13,6 +13,7 @@ services:
   pc:
     build:
       context: .
+    container_name: pc
     environment:
       HOST: "pc"
       DEVICE_TYPE: "laboratory"
@@ -23,6 +24,7 @@ services:
   server:
     build:
       context: .
+    container_name: server
     environment:
       HOST: "server"
       DEVICE_TYPE: "wearable"
@@ -34,6 +36,7 @@ services:
   smartphones:
     build:
       context: .
+    container_name: smartphones
     environment:
       HOST: "smartphone"
       DEVICE_TYPE: "wearable"
