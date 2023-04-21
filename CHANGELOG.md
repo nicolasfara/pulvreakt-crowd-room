@@ -1,3 +1,23 @@
+## [1.1.0](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.0.0...1.1.0) (2023-04-21)
+
+
+### Features
+
+* print colored log for actuator action ([c83e459](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/c83e4591a41394f1616ef7d7d932cbe11bfeb071))
+
+
+### Refactoring
+
+* rename classes according to the scenario description ([764aed2](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/764aed263cb15306f0a8e5be612dd466adadd7d6))
+
+
+### General maintenance
+
+* **build:** prevent publish to npm ([4312dab](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/4312dab820546c3b7395cc31076f68e9e1bbfc21))
+* fix pubblication ([2fceb95](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/2fceb9592d79cea72cae23326310a65ca55bbe26))
+* **readme:** update readme ([109a4ca](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/109a4cae27c5aec6cdef1d6c1296d58d88d125c2))
+* **readme:** update readme ([c2461e1](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/c2461e1b16c16809a57a4e86fe1a488231ac05d8))
+
 ## 1.0.0 (2023-04-20)
 
 
