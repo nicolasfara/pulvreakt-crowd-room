@@ -1,4 +1,5 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+import org.danilopianini.gradle.mavencentral.DocStyle
 import org.danilopianini.gradle.mavencentral.JavadocJar
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 import org.gradle.internal.os.OperatingSystem
@@ -179,21 +180,26 @@ signing {
 }
 
 publishOnCentral {
-    projectLongName.set("Template for Kotlin Multiplatform Project")
-    projectDescription.set("A template repository for Kotlin Multiplatform projects")
-    repository("https://maven.pkg.github.com/danysk/${rootProject.name}".toLowerCase()) {
-        user.set("DanySK")
-        password.set(System.getenv("GITHUB_TOKEN"))
-    }
+    projectLongName.set("ACSOS-2023-pulverization-crowd-room")
+    projectDescription.set("Crowd room experiment with pulverization framework")
     publishing {
         publications {
-            withType<MavenPublication> {
+            docStyle.set(DocStyle.HTML)
+            withType<MavenPublication>().configureEach {
+                if ("OSSRH" !in name) {
+                    artifact(tasks.javadocJar)
+                }
                 pom {
+                    scm {
+                        connection.set("git:git@github.com:nicolasfara/${rootProject.name}")
+                        developerConnection.set("git:git@github.com:nicolasfara/${rootProject.name}")
+                        url.set("https://github.com/nicolasfara/${rootProject.name}")
+                    }
                     developers {
                         developer {
-                            name.set("Danilo Pianini")
-                            email.set("danilo.pianini@gmail.com")
-                            url.set("http://www.danilopianini.org/")
+                            name.set("Nicolas Farabegoli")
+                            email.set("nicolas.farabegoli@gmail.com")
+                            url.set("https://www.nicolasfarabegoli.it")
                         }
                     }
                 }
@@ -209,16 +215,6 @@ npmPublish {
             val npmToken: String? by project
             authToken.set(npmToken)
             dry.set(npmToken.isNullOrBlank())
-        }
-    }
-}
-
-publishing {
-    publications {
-        publications.withType<MavenPublication>().configureEach {
-            if ("OSSRH" !in name) {
-                artifact(tasks.javadocJar)
-            }
         }
     }
 }
