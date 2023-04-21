@@ -97,19 +97,19 @@ pc           | Info: (LaboratoryActuator) Print color: ████████�
 ...
 ```
 
-The order of the printed log does not represents the real order on which the communication occurs.  
+The order of the printed log does not represent the real order on which the communication occurs.  
 Nevertheless, from the log above:  
 `Info: (WearableSensors) Wearable#<n> Perceived neighbours: {<n_1>=-<rssi>, <n_2>=-<rssi>}`
-represents that the device `<n>` has perceived `<n_1>` and `<n_2>` with their corresponding RSSI.  
+represents that the device `<n>` has perceived the `<n_1>` and `<n_2>` smartphones with their corresponding RSSI.  
 `Info: (WearableBehaviour) Wearable#<n> distances: {<n_1>=<distance>, <n_2>=<distance>}` represents the conversion
-of the RSSI into a distance.
+of each sensed RSSI into the corresponding distance.
 
 `Info: (LaboratoryBehaviour) Mean distance: <mean_distance>` means that the laboratory has updated its congestion metrics.  
 `Info: (LaboratoryActuator) Print color: [COLOR]` represents the color update in the monitor relative to the metrics update.
 
 ### Reconfiguration event
 
-When the reconfiguration event is triggered, the log is the following:
+The reconfiguration event can be observed when the following prints are reported in the log:
 
 ```
 ...
@@ -119,7 +119,7 @@ server       | New reconfiguration!
 ...
 ```
 
-After the reconfiguration, the log change as following:
+Once the reconfiguration is finished the log changes accordingly:
 
 ```
 ...
@@ -138,11 +138,11 @@ pc           | Info: (LaboratoryActuator) Print color: ████████�
 ...
 ```
 
-As can be seen, the behaviour moves from the **Server** into the **Smartphones**.  
-This can be seen because the log is printed from the `smartphones` (previously executed on `server`).
+As can be seen, the _Behaviour_ moves from the **Server** into the **Smartphones**.  
+This can be seen because the log is printed from the `smartphones` container (previously executed on `server` one).
 
 ## Verbose logs
 
-To have a more verbose log, the DEBUG_LOG_LEVEL environment variable can be set to "1".
+To have a more verbose log, the `DEBUG_LOG_LEVEL` environment variable can be set to `1`.
 This enables the debug log inside the framework to show the interaction and communication between components to
 better understand how the framework behaves.
