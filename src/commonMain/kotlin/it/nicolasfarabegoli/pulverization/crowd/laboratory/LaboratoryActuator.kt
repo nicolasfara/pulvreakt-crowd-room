@@ -14,12 +14,21 @@ data class CongestionColor(val red: Int, val green: Int, val blue: Int)
 
 private fun String.colorize(color: CongestionColor): String {
     val (r, g, b) = color
-    return "\\e[48;2;$r;$g;${b}m${this}\\e[0m"
+    return "\u001B[38;2;$r;$g;${b}m${this}\u001B[0m"
 }
 
 class LaboratoryActuator : Actuator<CongestionColor> {
     private val logger = Logger.withTag("RoomActuator")
-    override suspend fun actuate(payload: CongestionColor) = logger.i { "New color shown: $payload" }
+    private val solidBlocks = (1..BLOCK_LENGTH).map { BLOCK }.joinToString("")
+
+    companion object {
+        private const val BLOCK_LENGTH = 10
+        private const val BLOCK = '\u2588'
+    }
+
+    override suspend fun actuate(payload: CongestionColor) = logger.i {
+        "Print color: $solidBlocks".colorize(payload)
+    }
 }
 
 class LaboratoryActuatorsContainer : ActuatorsContainer() {
