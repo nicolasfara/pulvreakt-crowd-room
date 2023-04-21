@@ -1,4 +1,4 @@
-package it.nicolasfarabegoli.pulverization.crowd.smartphone
+package it.nicolasfarabegoli.pulverization.crowd.wearable
 
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.Severity
@@ -10,5 +10,5 @@ suspend fun main(args: Array<String>) {
     Logger.setMinSeverity(severity)
     val deviceId = args[0]
     val host = args[1]
-    smartphoneProgram(deviceId, host)
+    wearableProgram(deviceId, host)
 }

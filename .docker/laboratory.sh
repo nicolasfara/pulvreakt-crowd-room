@@ -5,4 +5,4 @@ until nc -z "${RABBITMQ_HOST:-rabbitmq}" "${RABBITMQ_PORT:-5672}"; do
   sleep 5
 done
 
-java -jar room-all.jar "0" "pc"
+java -jar laboratory-all.jar "0" "pc"

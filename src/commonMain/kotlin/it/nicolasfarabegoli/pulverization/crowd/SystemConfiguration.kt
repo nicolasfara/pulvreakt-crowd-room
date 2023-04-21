@@ -1,18 +1,18 @@
 package it.nicolasfarabegoli.pulverization.crowd
 
-import it.nicolasfarabegoli.pulverization.crowd.room.CongestionColor
-import it.nicolasfarabegoli.pulverization.crowd.room.RoomActuatorsContainer
-import it.nicolasfarabegoli.pulverization.crowd.room.RoomBehaviour
-import it.nicolasfarabegoli.pulverization.crowd.room.RoomState
-import it.nicolasfarabegoli.pulverization.crowd.room.StateOps
-import it.nicolasfarabegoli.pulverization.crowd.room.roomActuatorsLogic
-import it.nicolasfarabegoli.pulverization.crowd.room.roomBehaviourLogic
-import it.nicolasfarabegoli.pulverization.crowd.room.roomStateLogic
-import it.nicolasfarabegoli.pulverization.crowd.smartphone.NeighboursRssi
-import it.nicolasfarabegoli.pulverization.crowd.smartphone.SmartphoneBehaviour
-import it.nicolasfarabegoli.pulverization.crowd.smartphone.SmartphoneSensorsContainer
-import it.nicolasfarabegoli.pulverization.crowd.smartphone.smartphoneBehaviourLogic
-import it.nicolasfarabegoli.pulverization.crowd.smartphone.smartphoneSensorsLogic
+import it.nicolasfarabegoli.pulverization.crowd.laboratory.CongestionColor
+import it.nicolasfarabegoli.pulverization.crowd.laboratory.LaboratoryActuatorsContainer
+import it.nicolasfarabegoli.pulverization.crowd.laboratory.LaboratoryBehaviour
+import it.nicolasfarabegoli.pulverization.crowd.laboratory.LaboratoryState
+import it.nicolasfarabegoli.pulverization.crowd.laboratory.StateOps
+import it.nicolasfarabegoli.pulverization.crowd.laboratory.laboratoryActuatorsLogic
+import it.nicolasfarabegoli.pulverization.crowd.laboratory.roomBehaviourLogic
+import it.nicolasfarabegoli.pulverization.crowd.laboratory.laboratoryStateLogic
+import it.nicolasfarabegoli.pulverization.crowd.wearable.NeighboursRssi
+import it.nicolasfarabegoli.pulverization.crowd.wearable.WearableBehaviour
+import it.nicolasfarabegoli.pulverization.crowd.wearable.WearableSensorsContainer
+import it.nicolasfarabegoli.pulverization.crowd.wearable.wearableBehaviourLogic
+import it.nicolasfarabegoli.pulverization.crowd.wearable.wearableSensorsLogic
 import it.nicolasfarabegoli.pulverization.dsl.model.Actuators
 import it.nicolasfarabegoli.pulverization.dsl.model.Behaviour
 import it.nicolasfarabegoli.pulverization.dsl.model.Capability
@@ -71,24 +71,24 @@ object HighLoadOnServer : ReconfigurationEvent<Double> {
 }
 
 val config = pulverizationSystem {
-    device("room") {
+    device("laboratory") {
         Behaviour and State deployableOn HighCPU
         Communication deployableOn HighCPU
         Actuators deployableOn CanShow
     }
-    device("smartphone") {
+    device("wearable") {
         Behaviour deployableOn setOf(HighCPU, EmbeddedDevice)
         Communication deployableOn EmbeddedDevice
         Sensors deployableOn EmbeddedDevice
     }
 }
 
-suspend fun smartphoneRuntimeSetup():
+suspend fun wearableRuntimeSetup():
     DeploymentUnitRuntimeConfiguration<Unit, NeighboursDistances, NeighboursRssi, Unit, Unit> {
-    return pulverizationRuntime(config, "smartphone", availableHosts) {
-        SmartphoneBehaviour() withLogic ::smartphoneBehaviourLogic startsOn Server
-        DeviceCommunication() withLogic ::smartphoneCommunicationLogic startsOn Smartphone
-        SmartphoneSensorsContainer() withLogic ::smartphoneSensorsLogic startsOn Smartphone
+    return pulverizationRuntime(config, "wearable", availableHosts) {
+        WearableBehaviour() withLogic ::wearableBehaviourLogic startsOn Server
+        DeviceCommunication() withLogic ::wearableCommunicationLogic startsOn Smartphone
+        WearableSensorsContainer() withLogic ::wearableSensorsLogic startsOn Smartphone
 
         reconfigurationRules {
             onDevice {
@@ -102,13 +102,13 @@ suspend fun smartphoneRuntimeSetup():
     }
 }
 
-suspend fun roomRuntimeSetup():
+suspend fun laboratoryRuntimeSetup():
     DeploymentUnitRuntimeConfiguration<StateOps, NeighboursDistances, Unit, CongestionColor, Unit> {
-    return pulverizationRuntime(config, "room", availableHosts) {
-        RoomBehaviour() withLogic ::roomBehaviourLogic startsOn LocalPC
-        RoomState() withLogic ::roomStateLogic startsOn LocalPC
-        DeviceCommunication() withLogic ::roomCommunicationLogic startsOn LocalPC
-        RoomActuatorsContainer() withLogic ::roomActuatorsLogic startsOn LocalPC
+    return pulverizationRuntime(config, "laboratory", availableHosts) {
+        LaboratoryBehaviour() withLogic ::roomBehaviourLogic startsOn LocalPC
+        LaboratoryState() withLogic ::laboratoryStateLogic startsOn LocalPC
+        DeviceCommunication() withLogic ::laboratoryCommunicationLogic startsOn LocalPC
+        LaboratoryActuatorsContainer() withLogic ::laboratoryActuatorsLogic startsOn LocalPC
 
         withCommunicator { RabbitmqCommunicator(hostname = "rabbitmq") }
         withReconfigurator { RabbitmqReconfigurator(hostname = "rabbitmq") }

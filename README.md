@@ -81,7 +81,7 @@ acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (State[component]Comm
 acsos-2023-pulverization-crowd-room-smartphones-1  | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from State[component] and Behaviour[component]
 acsos-2023-pulverization-crowd-room-server-1       | Info: (State[component]Communicator) Setup communicator
 acsos-2023-pulverization-crowd-room-server-1       | Info: (RabbitmqCommunicator) Setup RabbitMQ communicator from State[component] and Behaviour[component]
-
+...
 ```
 
 After the initialization step, each deployment unit starts to run the components. In particular, each smartphone

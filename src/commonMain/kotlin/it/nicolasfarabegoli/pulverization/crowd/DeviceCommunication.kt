@@ -10,7 +10,7 @@ data class NeighboursDistances(val deviceId: String, val distances: Map<String, 
 
 expect class DeviceCommunication() : Communication<NeighboursDistances>
 
-suspend fun roomCommunicationLogic(
+suspend fun laboratoryCommunicationLogic(
     communication: Communication<NeighboursDistances>,
     behaviourRef: BehaviourRef<NeighboursDistances>,
 ) = coroutineScope {
@@ -19,7 +19,7 @@ suspend fun roomCommunicationLogic(
     }
 }
 
-suspend fun smartphoneCommunicationLogic(
+suspend fun wearableCommunicationLogic(
     communication: Communication<NeighboursDistances>,
     behaviourRef: BehaviourRef<NeighboursDistances>,
 ) = coroutineScope {

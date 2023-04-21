@@ -1,4 +1,4 @@
-package it.nicolasfarabegoli.pulverization.crowd.smartphone
+package it.nicolasfarabegoli.pulverization.crowd.wearable
 
 import co.touchlab.kermit.Logger
 import it.nicolasfarabegoli.pulverization.component.Context
@@ -13,7 +13,7 @@ import kotlinx.coroutines.coroutineScope
 import org.koin.core.component.inject
 import kotlin.math.pow
 
-class SmartphoneBehaviour : Behaviour<Unit, NeighboursDistances, NeighboursRssi, Unit, Unit> {
+class WearableBehaviour : Behaviour<Unit, NeighboursDistances, NeighboursRssi, Unit, Unit> {
     override val context: Context by inject()
     private val logger = Logger.withTag("SmartphoneBehaviour")
 
@@ -36,7 +36,7 @@ class SmartphoneBehaviour : Behaviour<Unit, NeighboursDistances, NeighboursRssi,
 }
 
 @Suppress("UnusedPrivateMember")
-suspend fun smartphoneBehaviourLogic(
+suspend fun wearableBehaviourLogic(
     behaviour: Behaviour<Unit, NeighboursDistances, NeighboursRssi, Unit, Unit>,
     stateRef: StateRef<Unit>,
     commRef: CommunicationRef<NeighboursDistances>,

@@ -1,4 +1,4 @@
-package it.nicolasfarabegoli.pulverization.crowd.room
+package it.nicolasfarabegoli.pulverization.crowd.laboratory
 
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.Severity
@@ -10,5 +10,5 @@ suspend fun main(args: Array<String>) {
     Logger.setMinSeverity(severity)
     val deviceId = args[0]
     val host = args[1]
-    roomProgram(deviceId, host)
+    laboratoryProgram(deviceId, host)
 }

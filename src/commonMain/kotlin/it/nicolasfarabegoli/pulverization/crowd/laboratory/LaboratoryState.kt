@@ -1,4 +1,4 @@
-package it.nicolasfarabegoli.pulverization.crowd.room
+package it.nicolasfarabegoli.pulverization.crowd.laboratory
 
 import it.nicolasfarabegoli.pulverization.component.Context
 import it.nicolasfarabegoli.pulverization.core.State
@@ -11,22 +11,22 @@ import org.koin.core.component.inject
 sealed interface StateOps
 
 @Serializable
-data class RoomCongestion(val congestion: Double) : StateOps
+data class LaboratoryCongestion(val congestion: Double) : StateOps
 
 @Serializable
 object GetState : StateOps
 
-class RoomState : State<StateOps> {
+class LaboratoryState : State<StateOps> {
     override val context: Context by inject()
 
-    private var actualState = RoomCongestion(0.0)
+    private var actualState = LaboratoryCongestion(0.0)
 
     override fun get(): StateOps = actualState
 
-    override fun update(newState: StateOps): RoomCongestion {
+    override fun update(newState: StateOps): LaboratoryCongestion {
         return when (newState) {
             is GetState -> actualState
-            is RoomCongestion -> {
+            is LaboratoryCongestion -> {
                 actualState = newState
                 newState
             }
@@ -34,14 +34,14 @@ class RoomState : State<StateOps> {
     }
 }
 
-suspend fun roomStateLogic(
+suspend fun laboratoryStateLogic(
     state: State<StateOps>,
     behaviourRef: BehaviourRef<StateOps>,
 ) = coroutineScope {
     behaviourRef.receiveFromComponent().collect {
         when (it) {
             is GetState -> behaviourRef.sendToComponent(state.get())
-            is RoomCongestion -> state.update(it)
+            is LaboratoryCongestion -> state.update(it)
         }
     }
 }

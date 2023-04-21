@@ -1,4 +1,4 @@
-package it.nicolasfarabegoli.pulverization.crowd.room
+package it.nicolasfarabegoli.pulverization.crowd.laboratory
 
 import co.touchlab.kermit.Logger
 import it.nicolasfarabegoli.pulverization.component.Context
@@ -13,7 +13,7 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.first
 import org.koin.core.component.inject
 
-class RoomBehaviour : Behaviour<StateOps, NeighboursDistances, Unit, CongestionColor, Unit> {
+class LaboratoryBehaviour : Behaviour<StateOps, NeighboursDistances, Unit, CongestionColor, Unit> {
     override val context: Context by inject()
     private val logger = Logger.withTag("RoomBehaviour")
 
@@ -43,7 +43,7 @@ class RoomBehaviour : Behaviour<StateOps, NeighboursDistances, Unit, CongestionC
         val congestionColor = CongestionColor(redChannel, greenChannel, 0)
 
         return BehaviourOutput(
-            RoomCongestion(meanDistance),
+            LaboratoryCongestion(meanDistance),
             NeighboursDistances("0", emptyMap()),
             congestionColor,
             Unit,

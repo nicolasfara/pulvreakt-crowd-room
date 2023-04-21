@@ -16,7 +16,7 @@ done
 
 for ((i=1;i<=num_devices;i++))
 do
-  java -jar smartphone-all.jar "$((i))" "$host" &
+  java -jar wearable-all.jar "$((i))" "$host" &
   pids[$i]=$!
 done
 

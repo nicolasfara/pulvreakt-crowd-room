@@ -1,4 +1,4 @@
-package it.nicolasfarabegoli.pulverization.crowd.smartphone
+package it.nicolasfarabegoli.pulverization.crowd.wearable
 
 import co.touchlab.kermit.Logger
 import it.nicolasfarabegoli.pulverization.component.Context
@@ -15,8 +15,8 @@ import kotlin.time.Duration.Companion.milliseconds
 @Serializable
 data class NeighboursRssi(val neighboursRssi: Map<String, Int>)
 
-class SmartphoneSensors(private val deviceId: String) : Sensor<NeighboursRssi> {
-    private val logger = Logger.withTag("SmartphoneSensors")
+class WearableSensors(private val deviceId: String) : Sensor<NeighboursRssi> {
+    private val logger = Logger.withTag("WearableSensors")
 
     companion object {
         private const val MIN_RSSI = -75
@@ -33,19 +33,19 @@ class SmartphoneSensors(private val deviceId: String) : Sensor<NeighboursRssi> {
     }
 }
 
-class SmartphoneSensorsContainer : SensorsContainer() {
+class WearableSensorsContainer : SensorsContainer() {
     override val context: Context by inject()
 
     override suspend fun initialize() {
-        this += SmartphoneSensors(context.deviceID).apply { initialize() }
+        this += WearableSensors(context.deviceID).apply { initialize() }
     }
 }
 
-suspend fun smartphoneSensorsLogic(
+suspend fun wearableSensorsLogic(
     sensors: SensorsContainer,
     behaviourRef: BehaviourRef<NeighboursRssi>,
 ) = coroutineScope {
-    sensors.get<SmartphoneSensors> {
+    sensors.get<WearableSensors> {
         while (true) {
             behaviourRef.sendToComponent(sense())
             delay(500.milliseconds)

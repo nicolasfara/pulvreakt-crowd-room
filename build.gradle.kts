@@ -48,20 +48,20 @@ kotlin {
         testRuns["test"].executionTask.configure {
             useJUnitPlatform()
         }
-        val smartphoneJar by tasks.registering(ShadowJar::class) {
-            description = "Generate jar for smartphone device"
+        val wearableJar by tasks.registering(ShadowJar::class) {
+            description = "Generate jar for wearable device"
             group = "publishing"
-            jarConfiguration("smartphone", "it.nicolasfarabegoli.pulverization.crowd.smartphone.SmartphoneMainKt")
+            jarConfiguration("wearable", "it.nicolasfarabegoli.pulverization.crowd.wearable.WearableMainKt")
         }
-        val roomJar by tasks.registering(ShadowJar::class) {
-            description = "Generate jar for room device"
+        val laboratoryJar by tasks.registering(ShadowJar::class) {
+            description = "Generate jar for laboratory device"
             group = "publishing"
-            jarConfiguration("room", "it.nicolasfarabegoli.pulverization.crowd.room.RoomMainKt")
+            jarConfiguration("laboratory", "it.nicolasfarabegoli.pulverization.crowd.laboratory.LaboratoryMainKt")
         }
         val generateJars by tasks.registering {
             description = "Generate all the jars"
             group = "publishing"
-            dependsOn(smartphoneJar, roomJar)
+            dependsOn(wearableJar, laboratoryJar)
         }
     }
 

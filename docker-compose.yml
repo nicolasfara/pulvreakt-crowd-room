@@ -15,7 +15,7 @@ services:
       context: .
     environment:
       HOST: "pc"
-      DEVICE_TYPE: "room"
+      DEVICE_TYPE: "laboratory"
       DEBUG_LOG_LEVEL: 0
     networks:
       - proxynet
@@ -25,7 +25,7 @@ services:
       context: .
     environment:
       HOST: "server"
-      DEVICE_TYPE: "smartphone"
+      DEVICE_TYPE: "wearable"
       DEVICE_NUM: 3
       DEBUG_LOG_LEVEL: 0
     networks:
@@ -36,7 +36,7 @@ services:
       context: .
     environment:
       HOST: "smartphone"
-      DEVICE_TYPE: "smartphone"
+      DEVICE_TYPE: "wearable"
       DEVICE_NUM: 3
       DEBUG_LOG_LEVEL: 0
     networks:
