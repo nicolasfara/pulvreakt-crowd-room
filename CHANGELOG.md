@@ -1,3 +1,43 @@
+## [1.1.1](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.0...1.1.1) (2023-04-25)
+
+
+### Style improvements
+
+* improve logging ([e97ac29](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/e97ac29b0deba16f0660022dec2624cbe4a98479))
+
+
+### General maintenance
+
+* **docker-compose:** refactor environment variables ([5cba6d1](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/5cba6d1bc9e75aa9b3ae84322af0162ee2347457))
+* **readme:** update readme ([711221e](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/711221eb1c2f6c3e3143ef012e042839a0457cdd))
+* update readme ([add8657](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/add86578d26f2815be1fed02d64e1c576011810e))
+* update readme and docker-compose files ([7de0d48](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/7de0d4826753f30cf37b34eac43410b2c6747213))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.4 ([7230820](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/72308208feda1fcae063914827b9f2855e7b7240))
+
+
+### Dependency updates
+
+* **core-deps:** update kotlin monorepo to v1.8.21 ([dc5e72c](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/dc5e72c8599979aa25edda54342e335ad627bd85))
+* **deps:** update dependency gradle to v8.1.1 ([a53ae23](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/a53ae2396bb70c8208db8344daf4e1fa63eb80ee))
+* **deps:** update eclipse-temurin docker tag to v17.0.6_10-jre ([fdaa38f](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/fdaa38fe6a39b368e6dc9f0ae9ac0d41868870d3))
+* **deps:** update gradle docker tag to v8.1.1 ([e9355e4](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/e9355e4f4d3230b93aa79f0dcb6ed4fae8c1fccd))
+* **deps:** update kotest to v5.5.5 ([481cc67](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/481cc67184cdff2bdfc55bdf722a4fa0ddb1f827))
+* **deps:** update kotest to v5.6.1 ([384b32d](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/384b32d60bc5c5da38ca019c0770ea9e68cbaa81))
+* **deps:** update plugin gitsemver to v1.1.8 ([b6d60aa](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/b6d60aa465b2417c005e13f3adb6e0b945ae04e9))
+* **deps:** update plugin gitsemver to v1.1.9 ([d9065fd](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/d9065fd4af5db6119f1daa72e50b853965c20a98))
+* **deps:** update plugin multijvmtesting to v0.4.21 ([2944d98](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/2944d9852004666b33903b5d6fe234825fbdd639))
+* **deps:** update plugin multijvmtesting to v0.4.22 ([34331ab](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/34331ab38ef0a8d4d92869ddbb7adef371026d51))
+* **deps:** update plugin multijvmtesting to v0.4.23 ([9554b9d](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/9554b9d728ee15c5ccad1fc73a5ddb675dc498f7))
+* **deps:** update plugin org.gradle.toolchains.foojay-resolver-convention to v0.5.0 ([bce07ea](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/bce07ea2394a77c0bdaf886599e8fcde59050b41))
+* **deps:** update plugin publishoncentral to v5.0.2 ([e01953e](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/e01953e5568dfc5128ae3928734fdaaf85d00551))
+* **deps:** update plugin publishoncentral to v5.0.3 ([3c0bb22](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/3c0bb22d1f4c0279e806ff4d53f05715b96c3f77))
+* **deps:** update plugin publishoncentral to v5.0.4 ([8641972](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/864197233f574694e628c658181f549a141e0904))
+* **deps:** update plugin publishoncentral to v5.0.5 ([5b69ed9](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/5b69ed907e45b0b4b69598d48ff7284494b9bf84))
+
 ## [1.1.0](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.0.0...1.1.0) (2023-04-21)
 
 
