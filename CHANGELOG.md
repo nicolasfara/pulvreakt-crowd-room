@@ -1,3 +1,18 @@
+## [1.1.2](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.1...1.1.2) (2023-05-05)
+
+
+### Dependency updates
+
+* **core-deps:** update org.jetbrains.kotlinx to v1.7.0 ([cb208f9](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/cb208f96e1286c7eddcd13f24d3a3c91c241a99e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.26 ([0667edd](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/0667eddbeb05b1c3664a2d341b11cd90f3c79eed))
+* **deps:** update eclipse-temurin docker tag to v17.0.7_7-jre ([18e1a42](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/18e1a429dbb65bc7f05e74921bb9715d169dcefa))
+* **deps:** update plugin com.gradle.enterprise to v3.13.1 ([27798d8](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/27798d853865184074f20f484fa64d94744bd82a))
+* **deps:** update plugin npm-publish to v3.3.0 ([eafb93d](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/eafb93da7002d0a2451a238c97f2b1343db4a70e))
+* **deps:** update plugin npm-publish to v3.3.1 ([b9eba11](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/b9eba11a5cf47418cac09f11aaa020d4fd86afed))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.7 ([f00f908](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/f00f90800c9bf99d1499a2af14e16f0865674a99))
+* **deps:** update pulverization to v0.5.1 ([8d96be3](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/8d96be350a3f599ab8e2f7e2bc0fe524ec9f3c23))
+* **deps:** update pulverization to v0.5.2 ([bdda982](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/bdda982a04fa5dea3bf751f2a9c3190097518322))
+
 ## [1.1.1](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.0...1.1.1) (2023-04-25)
 
 
