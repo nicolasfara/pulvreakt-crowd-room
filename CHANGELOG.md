@@ -1,3 +1,13 @@
+## [1.1.3](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.2...1.1.3) (2023-05-11)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.5.1 ([549bae7](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/549bae744f0e1694f30c5cc4ac6b36ff52107ca1))
+* **deps:** update kotest to v5.6.2 ([0b0f8b8](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/0b0f8b8a3d232ce7f807abeb01d665385957db02))
+* **deps:** update plugin com.gradle.enterprise to v3.13.2 ([7af79fc](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/7af79fc91a65bea98d3ac2cb0fbc832a7fad9194))
+* **deps:** update plugin multijvmtesting to v0.5.0 ([9003abc](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/9003abcbec26d8c1fdc602152cc850d0ec6a934e))
+
 ## [1.1.2](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.1...1.1.2) (2023-05-05)
 
 
