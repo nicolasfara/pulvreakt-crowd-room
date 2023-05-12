@@ -1,3 +1,11 @@
+## [1.1.4](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.3...1.1.4) (2023-05-12)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-reactor to v1.7.1 ([7825451](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/7825451c153480c2d351e8feee002f3518e784ef))
+* **deps:** update plugin multijvmtesting to v0.5.1 ([b6b9318](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/b6b9318e85d92dde050c5f875e7c3e9b250ab94c))
+
 ## [1.1.3](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.2...1.1.3) (2023-05-11)
 
 
