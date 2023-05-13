@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.4...1.1.5) (2023-05-13)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-coroutines-core to v1.7.1 ([f0c320f](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/f0c320f2c074394e817219333648425290ecf9f4))
+
 ## [1.1.4](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.3...1.1.4) (2023-05-12)
 
 
