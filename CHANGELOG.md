@@ -1,3 +1,25 @@
+## [1.1.6](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.5...1.1.6) (2023-06-05)
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.5 ([187d2ec](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/187d2ec53633044a9d07f2ee8d944dab046e58db))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.6 ([69bb6dc](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/69bb6dcbafd2357f524070bc7ee5e0c584ec217e))
+
+
+### Documentation
+
+* **deps:** update plugin dokka to v1.8.20 ([436b08d](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/436b08d962bdb10475f48ebdb8a380ed1824169a))
+
+
+### Dependency updates
+
+* **deps:** update dependency io.insert-koin:koin-core to v3.4.1 ([7280e03](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/7280e034a928a78ce676179334db30fe5c68ba57))
+* **deps:** update dependency io.insert-koin:koin-core to v3.4.2 ([a8f4750](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/a8f4750e45690192e85e64897ae7a5fb04187cd4))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.27 ([b660a1e](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/b660a1ee3b57be59704cec2e66b9306b7622f9ad))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.30 ([386e69a](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/386e69a8ee7b61311dd62763eb1562301bef11b4))
+* **deps:** update plugin com.gradle.enterprise to v3.13.3 ([4cce9ef](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/4cce9ef936d04f3efd9f864da653e85750ddc549))
+
 ## [1.1.5](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.4...1.1.5) (2023-05-13)
 
 
