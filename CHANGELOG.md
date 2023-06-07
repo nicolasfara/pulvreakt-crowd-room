@@ -1,3 +1,12 @@
+## [1.1.7](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.6...1.1.7) (2023-06-07)
+
+
+### Dependency updates
+
+* **core-deps:** update kotlin monorepo to v1.8.22 ([a2a3ec0](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/a2a3ec04cd8765a84cbead51f7eac227911d977e))
+* **deps:** update plugin gitsemver to v1.1.10 ([0c69d5b](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/0c69d5bda16cf5a6e8b1fa7c6ab9e0876e5db931))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.8 ([325442b](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/325442b9975c9fac01411d49b88ac3d3aae90cdf))
+
 ## [1.1.6](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.5...1.1.6) (2023-06-05)
 
 
