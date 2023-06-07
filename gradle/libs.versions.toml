@@ -1,6 +1,6 @@
 [versions]
 kotest = "5.6.2"
-kotlin = "1.8.21"
+kotlin = "1.8.22"
 koin = "3.4.2"
 serialization = "1.5.1"
 pulverization = "0.5.2"
