@@ -1,4 +1,4 @@
-FROM gradle:8.1.1-jdk17-jammy AS build
+FROM gradle:8.2.0-jdk17-jammy AS build
 
 WORKDIR /build-gradle/
 COPY . .
