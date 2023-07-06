@@ -1,3 +1,19 @@
+## [1.1.9](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.8...1.1.9) (2023-07-06)
+
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v3.7.0 ([1187ff0](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/1187ff03ba31274d06b984f7131509335851a36f))
+
+
+### Dependency updates
+
+* **core-deps:** update kotlin monorepo to v1.9.0 ([e9e62d7](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/e9e62d7538618ff670e5629bf72b62e7647fc21e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.39 ([811cd8d](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/811cd8df5626603cbef974e053f628d381154db6))
+* **deps:** update gradle docker tag to v8.2.0 ([90223fa](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/90223fa75acea8bb1c0c1c50391a2675e90ebac8))
+* **deps:** update plugin publishoncentral to v5.0.8 ([f92497b](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/f92497bc3ca2fc29eaafcc1a24b77c1ede919c29))
+* **deps:** update plugin publishoncentral to v5.0.9 ([6ce7ae4](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/6ce7ae41d75bc085880c8cf9b823c1196217c995))
+
 ## [1.1.8](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.7...1.1.8) (2023-07-01)
 
 
