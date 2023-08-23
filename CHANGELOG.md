@@ -1,3 +1,10 @@
+## [1.1.12](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.11...1.1.12) (2023-08-23)
+
+
+### Dependency updates
+
+* **core-deps:** update kotlin monorepo to v1.9.10 ([4ccfba5](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/4ccfba53f7887c7a3d2298031c6b4196fb28540b))
+
 ## [1.1.11](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.10...1.1.11) (2023-08-22)
 
 
