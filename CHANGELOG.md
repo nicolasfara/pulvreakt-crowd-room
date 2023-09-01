@@ -1,3 +1,25 @@
+## [1.1.13](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.12...1.1.13) (2023-09-01)
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3.6.0 ([f27adc3](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/f27adc32bac2f6e0909a4d6fda98019598ab9c60))
+* **deps:** update danysk/action-checkout action to v0.2.11 ([d8ec305](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/d8ec305e19f5fd27a48dd1002a0f6b0eeaf8ab51))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.44 ([df6d3c8](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/df6d3c85f9755d7c2fcb45fc0edf6ae432e6ba96))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.46 ([8e4b7d3](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/8e4b7d3d04e236052c0707ad5483fae4e8d15e9d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.47 ([dee7f43](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/dee7f43a86a21fe5f763b8c8fe4ead360218d881))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.49 ([fffbc5c](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/fffbc5c3f8ad9a99683e1f3685224d8faae2e89d))
+* **deps:** update plugin publishoncentral to v5.0.12 ([e06a661](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/e06a66105b9df26270fe40774f6ad35d931f085f))
+
+
+### Documentation
+
+* **deps:** update plugin dokka to v1.9.0 ([85c1cdc](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/85c1cdc528b251c2ebadad8fb5c04d299a3c7d58))
+
 ## [1.1.12](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.11...1.1.12) (2023-08-23)
 
 
