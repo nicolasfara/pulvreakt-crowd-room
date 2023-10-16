@@ -1,3 +1,49 @@
+## [1.1.14](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.13...1.1.14) (2023-10-16)
+
+
+### Dependency updates
+
+* **deps:** update dependency gradle to v8.4 ([1739fca](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/1739fca661806b9d8ee3e84ca734d2fc6bc1d8cb))
+* **deps:** update dependency io.kotest.multiplatform to v5.7.0 ([b312c09](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/b312c09b7a97c52734667cfeb885d440982267de))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.50 ([e07ddfa](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/e07ddfa8daaadcf743299ed4892cecd8a179eda4))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.53 ([4cdaf4d](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/4cdaf4d0cc47b6735dd3d9577062782ac59cef7e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.54 ([a1757a8](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/a1757a8c8e1236090fa96600ae55e3bb4241673d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.55 ([e236ed5](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/e236ed5c567bd1aca5a06ec58f1718a2874441bf))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.56 ([9b6a317](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/9b6a317a0f4ff602477a8d5e7c11371b2a3b38d2))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.60 ([fb22fa7](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/fb22fa7fe5fa4598e8e6d28153974ec4037fe713))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.62 ([9335073](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/93350736ed4e3c333f0c86563121198b3a6cc6be))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.64 ([36a5c45](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/36a5c45fed12822bf90ce89c0fc4f28f057d282e))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.65 ([9ed4b8b](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/9ed4b8bdf5d055f064f73617c09b2fe1b262b483))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.67 ([d336310](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/d33631040d430471c94952201b9bf5b4766db201))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.68 ([ee5422d](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/ee5422d429fd9b5a99125eff06cf6593a1a1d657))
+* **deps:** update eclipse-temurin docker tag to v21 ([572dffd](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/572dffdc9b3a5e359f81cfe079663f1f92dc08f8))
+* **deps:** update gradle docker tag to v8.4.0 ([92c505d](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/92c505d59c773cbaf4c739c7f7cf836eb45985e5))
+* **deps:** update kotest to v5.7.1 ([a14198e](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/a14198e91b541cf54dfd6e9f7f4ddd8832d0efee))
+* **deps:** update kotest to v5.7.2 ([296b1cd](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/296b1cd1f1dccb279ffc1b1642ff40c80f543fe7))
+* **deps:** update node.js to 18.18 ([2d97a72](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/2d97a7271175bc772ae9e0b6556b2b2cccfc329c))
+* **deps:** update plugin com.gradle.enterprise to v3.15 ([e692b6a](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/e692b6aeeec8fa41502a5ab5c20930e2a56c2b5d))
+* **deps:** update plugin com.gradle.enterprise to v3.15.1 ([ea951c1](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/ea951c14541d7c9b51d20d58fb4e8db8cd2a5367))
+* **deps:** update plugin multijvmtesting to v0.5.5 ([4f71588](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/4f71588cc9dde7fdc52a3196fb54dbb44c0c5741))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.10 ([9fabef2](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/9fabef2b71e0674b3ded70f7bb0f12b98592eb17))
+* **deps:** update plugin publishoncentral to v5.0.13 ([c47e642](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/c47e642cbb0e0d38657520fee03624d43808ad1e))
+* **deps:** update plugin publishoncentral to v5.0.14 ([841c2cc](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/841c2cc78dcdd52e99611bb3ee1592709a97f012))
+* **deps:** update plugin publishoncentral to v5.0.15 ([d957f5a](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/d957f5a152e1cd0ed8682878e2b28b88fc56cf7c))
+
+
+### Documentation
+
+* **deps:** update plugin dokka to v1.9.10 ([2fb7aa5](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/2fb7aa518b8956e536f416cd57a7413a56d1b01d))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v4 ([3db1183](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/3db11834fc7a9d4df35f6c60b1c5b311811b9e8a))
+* **deps:** update actions/checkout action to v4.1.0 ([e0da749](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/e0da7495b5cabed7ae8428b9b51cba9a9d680f51))
+* **deps:** update danysk/action-checkout action to v0.2.12 ([db9ca13](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/db9ca130553747c1e8ec994586ef42ba6f094333))
+* **deps:** update danysk/action-checkout action to v0.2.13 ([339a656](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/339a65692d679a2a95ec9a46f110320fc5e8c397))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.10 ([d819bbe](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/d819bbec361ac3149a8b495d13ef642fddd3263e))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.9 ([538dd72](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/commit/538dd7280aeb3b76e675484cdacb964c3c8738b4))
+
 ## [1.1.13](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.12...1.1.13) (2023-09-01)
 
 
