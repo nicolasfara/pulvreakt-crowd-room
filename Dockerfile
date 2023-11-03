@@ -4,7 +4,7 @@ WORKDIR /build-gradle/
 COPY . .
 RUN ./gradlew generateJars
 
-FROM eclipse-temurin:21-jre
+FROM eclipse-temurin:21.0.1_12-jre
 
 WORKDIR /root/
 COPY --from=build /build-gradle/build/libs/* ./
