@@ -1,5 +1,5 @@
 [versions]
-kotest = "5.7.2"
+kotest = "5.8.0"
 kotlin = "1.9.10"
 koin = "3.4.3"
 serialization = "1.6.0"
