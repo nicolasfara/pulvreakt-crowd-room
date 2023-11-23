@@ -1,3 +1,19 @@
+## [1.2.0](https://github.com/nicolasfara/pulvreakt-crowd-room/compare/1.1.15...1.2.0) (2023-11-23)
+
+
+### Features
+
+* rename project ([6491266](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/64912667827917cea173071c0a6e58dc4e960243))
+
+
+### Dependency updates
+
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.76 ([9f68c45](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/9f68c4590e78642f88e36a55144f904a64599e03))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.77 ([d3a7dc1](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/d3a7dc1e08882c048d0c94ac80e7177c04acd441))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.78 ([f70165a](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/f70165a4849569e2290b008938477c8b4f92f7bd))
+* **deps:** update node.js to 20.10 ([89794f0](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/89794f0fd5cb0d2b572469c9457fc99fd6077c25))
+* **deps:** update plugin gitsemver to v2.0.2 ([23b15fa](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/23b15faf7f6f30cd38f90c0f780389cf18e9e3fb))
+
 ## [1.1.15](https://github.com/nicolasfara/ACSOS-2023-pulverization-crowd-room/compare/1.1.14...1.1.15) (2023-11-15)
 
 
