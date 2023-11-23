@@ -27,4 +27,4 @@ gitHooks {
     createHooks()
 }
 
-rootProject.name = "ACSOS-2023-pulverization-crowd-room".lowercase(Locale.getDefault())
+rootProject.name = "pulvreakt-crowd-room"
