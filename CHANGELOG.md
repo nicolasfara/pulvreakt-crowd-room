@@ -1,3 +1,22 @@
+## [1.2.1](https://github.com/nicolasfara/pulvreakt-crowd-room/compare/1.2.0...1.2.1) (2023-12-05)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.6.2 ([e21d017](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/e21d017ecfef5edbf61344f06d715ba2ac09df8b))
+* **deps:** update dependency gradle to v8.5 ([f23198d](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/f23198d5f380ee21bfc054e13987fe79d46a58b2))
+* **deps:** update gradle docker tag to v8.5.0 ([5758a52](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/5758a5230760cdcdda913120b55e763efaa2ba5d))
+* **deps:** update plugin com.gradle.enterprise to v3.16 ([3402645](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/34026452cc0911dd9346c4cb785ebf91665b0758))
+* **deps:** update plugin gitsemver to v2.0.3 ([4953b41](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/4953b412f17e453c3fcad7ccefb5a88fed2f0842))
+* **deps:** update plugin gitsemver to v2.0.4 ([2589bb8](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/2589bb810c64fc0b8b9856a275e9604c002a2560))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.15 ([47e27f6](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/47e27f6e0ebca3c9a6a7981d8a08b7588bc2b218))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.16 ([7b6b729](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/7b6b72915e6382dc68be30b194b0a3a95b75895b))
+
+
+### Build and continuous integration
+
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.12 ([915693e](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/915693e53163a002eea2c72013f87d65fb9d7fef))
+
 ## [1.2.0](https://github.com/nicolasfara/pulvreakt-crowd-room/compare/1.1.15...1.2.0) (2023-11-23)
 
 
