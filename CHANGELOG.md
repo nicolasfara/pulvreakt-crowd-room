@@ -1,3 +1,48 @@
+## [1.2.2](https://github.com/nicolasfara/pulvreakt-crowd-room/compare/1.2.1...1.2.2) (2024-02-09)
+
+
+### Dependency updates
+
+* **core-deps:** update kotlin monorepo to v1.9.22 ([db5539a](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/db5539a96a4fe39dd9bab876277780e80ba26cce))
+* **deps:** update dependency gradle to v8.6 ([5a8972e](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/5a8972ee9db546d0c093e928d9a99760d5798a0d))
+* **deps:** update dependency io.insert-koin:koin-core to v3.5.3 ([bb4353a](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/bb4353a5bcb806becb1617cb1e87a56c73e40e58))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.79 ([9034714](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/903471433047f3a3efd19f4d427a7f8379ba7a0a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.80 ([f993b37](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/f993b3728ef615de556f2efbe6904ac403b21bf7))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.82 ([80bad85](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/80bad853c5c97fcfb9e8a1d8842237ddd6441630))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.83 ([00a671e](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/00a671ea72c1882532248f2ed4a53b375ac9e7d5))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.84 ([a0f88a3](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/a0f88a39afcbce868e61a37767d7eed6b590548d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.85 ([fea87a4](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/fea87a45f595d002d69279556aca3a0bc858201e))
+* **deps:** update eclipse-temurin docker tag to v21.0.2_13-jre ([ed81ca1](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/ed81ca1a27990b6929facef6ee2d4131fe99f10c))
+* **deps:** update gradle docker tag to v8.6.0 ([1969613](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/1969613adfafc383eee4c90b234ef5f8cbbe3573))
+* **deps:** update node.js to 20.11 ([cedd112](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/cedd112ad25dcaad5465eaf25912f6a42dba5055))
+* **deps:** update plugin com.gradle.enterprise to v3.16.1 ([6b3b5cb](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/6b3b5cbfb589208e407f2f59dca9c79cef7a91a2))
+* **deps:** update plugin com.gradle.enterprise to v3.16.2 ([c7f9d65](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/c7f9d654854a5ca594ee1655094e24343059e408))
+* **deps:** update plugin gitsemver to v2.0.5 ([fafbae6](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/fafbae63e68b7df26a9855b6567703ad6c14a7f5))
+* **deps:** update plugin gitsemver to v3 ([18c040e](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/18c040e6b09f79d88639317f05e2ecba5d4f3783))
+* **deps:** update plugin gitsemver to v3.1.0 ([6367d47](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/6367d47644675aa96b48e0ea1d3e65557afffd70))
+* **deps:** update plugin gitsemver to v3.1.1 ([bef2520](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/bef25206840b721f24a6742d63369f9e10b08004))
+* **deps:** update plugin multijvmtesting to v0.5.8 ([235b5eb](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/235b5eb721b1903388d7e04deb5f8f6e60386d30))
+* **deps:** update plugin npm-publish to v3.4.2 ([5eec2a4](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/5eec2a41098c2644360d5c6801f637513d5b7b5b))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v1.1.17 ([2f1acec](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/2f1acec87ea1c33fbf92cbdc31dc7d40a9d3ae25))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2 ([95b36cd](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/95b36cdf7ba24fa8707b71e1cd109f6e06010ff4))
+* **deps:** update plugin org.danilopianini.gradle-pre-commit-git-hooks to v2.0.1 ([c99bc7f](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/c99bc7f8acd040a01f04eb452875ad001e3dc626))
+* **deps:** update plugin org.gradle.toolchains.foojay-resolver-convention to v0.8.0 ([6f82c09](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/6f82c09c472cef22df005ae77ead3f65151de917))
+* **deps:** update pulverization to v0.7.2 ([3a0d0c5](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/3a0d0c571f241db58d0312a28a5141c5dd46593b))
+
+
+### Build and continuous integration
+
+* **deps:** update actions/setup-node action to v4.0.1 ([f7431a8](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/f7431a85ae60dc92d6b65c0c98b7982459fffc8e))
+* **deps:** update actions/setup-node action to v4.0.2 ([9c7dcd5](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/9c7dcd57ef45d680cb8382f8fbaf4e3dbde66ff9))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.13 ([ee5156a](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/ee5156a6631cc179bd113e49bbc33aeed39d7f85))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.14 ([3833311](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/3833311d89a92bce1c998201c8091d060e79e7da))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.15 ([f3bdfa8](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/f3bdfa8bc5c4f18f4831b30aadc12baf88d16963))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.17 ([0125cc0](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/0125cc00282ec4b024dc5abeb3423b60c998efa6))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.18 ([d449852](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/d4498525108fa845d1d5dd77075f890c76de19aa))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.19 ([b6b8501](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/b6b85014bf6e685056014651abea2658a4f8c013))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.2.20 ([577dda9](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/577dda9a1d2b8cc2b0cbc85702c6a5c4047d3a14))
+* **deps:** update danysk/build-check-deploy-gradle-action action to v2.4.0 ([b995fb0](https://github.com/nicolasfara/pulvreakt-crowd-room/commit/b995fb0dbb6a18fd45f389741b3a792faaeff095))
+
 ## [1.2.1](https://github.com/nicolasfara/pulvreakt-crowd-room/compare/1.2.0...1.2.1) (2023-12-05)
 
 
