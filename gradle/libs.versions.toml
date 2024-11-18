@@ -2,7 +2,7 @@
 kotest = "5.8.0"
 kotlin = "1.9.22"
 koin = "3.5.3"
-serialization = "1.6.2"
+serialization = "1.6.3"
 pulverization = "0.7.2"
 
 [libraries]
